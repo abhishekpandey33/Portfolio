@@ -5,15 +5,19 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-export default function App() {
+function App() {
   return (
-    <div className="bg-gray-50 text-gray-900">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+      <div className="bg-gray-50 text-gray-900">
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 }
+
+export default App;
