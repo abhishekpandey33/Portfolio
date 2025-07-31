@@ -26,9 +26,9 @@ const About = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <img
-          src=""
-          alt=""
-          className="w-64 h-64 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+          src="/my_img.jpg"
+          alt="AP"
+          className="w-80 h-100 object-contain rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
         />
       </motion.div>
 
@@ -41,42 +41,22 @@ const About = () => {
       >
         <h2 className="text-3xl font-bold mb-4 break-words">About Me</h2>
         <p className="text-gray-700 mb-6 break-words">
-          I am a passionate software engineer with expertise in building modern
-          web applications. My focus is on creating clean, scalable, and
-          efficient solutions using cutting-edge technologies. I am a passionate
-          software engineer with expertise in building modern web applications.
-          My focus is on creating clean, scalable, and efficient solutions using
-          cutting-edge technologies. I am a passionate software engineer with
-          expertise in building modern web applications. My focus is on creating
-          clean, scalable, and efficient solutions using cutting-edge
-          technologies. I am a passionate software engineer with expertise in
-          building modern web applications. My focus is on creating clean,
-          scalable, and efficient solutions using cutting-edge technologies. I
-          am a passionate software engineer with expertise in building modern
-          web applications. My focus is on creating clean, scalable, and
-          efficient solutions using cutting-edge technologies. I am a passionate
-          software engineer with expertise in building modern web applications.
-          My focus is on creating clean, scalable, and efficient solutions using
-          cutting-edge technologies. I am a passionate software engineer with
-          expertise in building modern web applications. My focus is on creating
-          clean, scalable, and efficient solutions using cutting-edge
-          technologies. I am a passionate software engineer with expertise in
-          building modern web applications. My focus is on creating clean,
-          scalable, and efficient solutions using cutting-edge technologies. I
-          am a passionate software engineer with expertise in building modern
-          web applications. My focus is on creating clean, scalable, and
-          efficient solutions using cutting-edge technologies. I am a passionate
-          software engineer with expertise in building modern web applications.
-          My focus is on creating clean, scalable, and efficient solutions using
-          cutting-edge technologies. I am a passionate software engineer with
-          expertise in building modern web applications. My focus is on creating
-          clean, scalable, and I am a passionate software engineer with
-          expertise in building modern web applications. My focus is on creating
-          clean, scalable, and efficient solutions using cutting-edge
-          technologies. I am a passionate software engineer with expertise in
-          building modern web applications. My focus is on creating clean,
-          scalable, and efficient solutions using cutting-edge technologies.
-          efficient solutions using cutting-edge technologies.
+          I am a Full Stack Developer with a strong foundation in frontend and
+          backend development.
+        </p>
+        <p className="text-gray-700 mb-6 break-words">
+          I was a **Finalist at Smart India Hackathon 2024**, where we developed
+          the *Duplicate Detection and Avoidance System (DDAS)* — a
+          cross-platform utility that detects duplicate downloads at the system
+          level using metadata analysis. This project involved system
+          programming, file monitoring, and multi-OS compatibility.
+        </p>
+        <p className="text-gray-700 mb-6 break-words">
+          I enjoy working across the stack — from creating clean and responsive
+          user interfaces to building robust APIs and backend systems. I’ve
+          worked with technologies like **Python, Django, React, JavaScript,
+          Express, Node, Flask, MongoDB, MySQL, Docker**, and have a good grasp
+          of **REST APIs, Git, and Agile workflows**.
         </p>
 
         <div
