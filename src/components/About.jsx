@@ -16,7 +16,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="h-screen bg-black text-white py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10"
+      className="h-auto min-h-screen bg-black text-white py-20 px-4 md:px-20 flex flex-col md:flex-row items-center gap-10 overflow-x-hidden"
     >
       <motion.div
         className="flex-shrink-0"
@@ -33,31 +33,38 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        className="flex-1 min-w-0"
+        className="flex-1 w-full min-w-0"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h2 className="text-3xl font-bold mb-4 break-words">About Me</h2>
-        <p className="text-gray-700 mb-6 break-words">
-          I am a Full Stack Developer with a strong foundation in frontend and
-          backend development.
-        </p>
-        <p className="text-gray-700 mb-6 break-words">
-          I was a **Finalist at Smart India Hackathon 2024**, where we developed
-          the *Duplicate Detection and Avoidance System (DDAS)* — a
-          cross-platform utility that detects duplicate downloads at the system
-          level using metadata analysis. This project involved system
-          programming, file monitoring, and multi-OS compatibility.
-        </p>
-        <p className="text-gray-700 mb-6 break-words">
-          I enjoy working across the stack — from creating clean and responsive
-          user interfaces to building robust APIs and backend systems. I’ve
-          worked with technologies like **Python, Django, React, JavaScript,
-          Express, Node, Flask, MongoDB, MySQL, Docker**, and have a good grasp
-          of **REST APIs, Git, and Agile workflows**.
-        </p>
+        <div className="">
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-400 mb-6">
+            I am a Full Stack Developer with a strong foundation in frontend and
+            backend development.
+          </p>
+          <p className="text-gray-400 mb-6">
+            I was a Finalist at Smart India Hackathon 2024, where we developed
+            the
+            <strong>Duplicate Detection and Avoidance System (DDAS)</strong> — a
+            cross-platform utility that detects duplicate downloads at the
+            system level using metadata analysis. This project involved system
+            programming, file monitoring, and multi-OS compatibility.
+          </p>
+          <p className="text-gray-400 mb-6">
+            I enjoy working across the stack — from creating clean and
+            responsive user interfaces to building robust APIs and backend
+            systems. I’ve worked with technologies like{" "}
+            <strong>
+              Python, Django, React, JavaScript, Express, Node, Flask, MongoDB,
+              MySQL, Docker
+            </strong>{" "}
+            and have a good grasp of{" "}
+            <strong>REST APIs, Git, and Agile workflows</strong>.
+          </p>
+        </div>
 
         <div
           className="overflow-hidden whitespace-nowrap"
