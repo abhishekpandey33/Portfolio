@@ -7,27 +7,27 @@ export default function Projects() {
     {
       title: "DDAS - Duplicate Detection & Avoidance System",
       description:
-        "Developed a system to detect and prevent duplicate data downloads in organizational networks, optimizing storage and bandwidth.",
+        "Developed a system-level utility software to detect and prevent duplicate data downloads in organizational networks, optimizing storage and bandwidth.",
     },
     {
       title: "ResumeAt - Resume Builder",
       description:
-        "An AI-powered chatbot providing personalized career guidance, degree recommendations, and interview preparation assistance.",
+        "A clean, interactive Resume builder , which allows users to create, edit and preview resumes in real-time, providing resume templates and pdf download.",
     },
     {
       title: "Academix - AI Powered Academic System",
       description:
-        "Built a responsive e-learning website with video lectures, quizzes, and student performance tracking features.",
+        "An AI-powered app that break the courses into structures modules and helps learners complete course in a proficient and sequential way.",
     },
     {
       title: "Anti-Theft IoT System",
       description:
-        "Implemented a smart home automation system using IoT devices, allowing remote control of appliances via a mobile app.",
+        "Built a motion-based security system using ESP32 and PIR sensor and integrated Pusbullet API for instant smartphone alerts improving Home Security through real-time intrusion detection and efficient IoT automation",
     },
     {
       title: "Cloud Centralized Development System",
       description:
-        "Centralized Development Environment using Client-Server Architecture(Cloud Computing)",
+        "Designed a client-server setup using SSH to centralize development and deployment and enabled team members to contribute without local installations, saving RAM/CPU, improving collaboration, version control, and resource efficiency across the team",
     },
     {
       title: "Portfolio Website",
