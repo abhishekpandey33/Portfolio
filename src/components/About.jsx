@@ -9,6 +9,12 @@ const About = () => {
     { name: "TailwindCSS", color: "bg-teal" },
     { name: "Python", color: "bg-purple" },
     { name: "MongoDB", color: "bg-green" },
+    { name: "Django", color: "bg-yellow" },
+    { name: "MYSQL", color: "bg-blue" },
+    { name: "REST APIs", color: "bg-green" },
+    { name: "GITHUB", color: "bg-teal" },
+    { name: "HTML", color: "bg-purple" },
+    { name: "CSS", color: "bg-green" },
   ];
 
   const [paused, setPaused] = useState(false);

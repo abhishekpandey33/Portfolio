@@ -1,53 +1,53 @@
 const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-900 text-white">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-5xl font-bold text-center mb-4">Contact Me</h2>
-        <p className="text-center text-gray-400 mb-12">
+        <p className="text-center text-gray-400 mb-20">
           Have a project or want to collaborate? Let’s talk!
         </p>
 
         {/* Grid: Contact Info + Form */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-40">
           {/* Left: Contact Info */}
           <div className="space-y-6">
             <p>
               📧 <span className="font-semibold">Email:</span>{" "}
               <a
-                href="mailto:youremail@example.com"
+                href="abhishek.pandey998877@gmail.com"
                 className="text-blue-400 hover:underline"
               >
-                youremail@example.com
+                abhishek.pandey998877@gmail.com
               </a>
             </p>
             <p>
               🔗 <span className="font-semibold">LinkedIn:</span>{" "}
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/abhishek-pandey-296b04250"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
               >
-                linkedin.com/in/yourprofile
+                linkedin.com/in/abhishek-pandey-296b04250
               </a>
             </p>
             <p>
               💻 <span className="font-semibold">GitHub:</span>{" "}
               <a
-                href="https://github.com/yourgithub"
+                href="https://github.com/abhishekpandey33"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline"
               >
-                github.com/yourgithub
+                github.com/abhishekpandey33
               </a>
             </p>
           </div>
 
           {/* Right: Contact Form */}
           <form
-            action="https://formspree.io/f/yourFormID" // Replace with your Formspree/EmailJS endpoint
+            action="https://formspree.io/f/manbdqjb" // Replace with your Formspree/EmailJS endpoint
             method="POST"
             className="space-y-6 bg-gray-800 p-6 rounded-lg shadow-lg"
           >

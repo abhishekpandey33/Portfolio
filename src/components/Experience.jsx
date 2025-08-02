@@ -54,11 +54,10 @@ const Experience = () => {
     //     </div>
     //   </div>
     // </section>
-    <section
-      id="experience"
-      className="bg-blue-400 text-black py-20 px-4 md:px-20"
-    >
-      <h2 className="text-5xl text-center font-bold mb-8">Experience</h2>
+    <section id="experience" className="bg-gray-900 py-20 px-4 md:px-20">
+      <h2 className="text-5xl text-center text-white font-bold mb-8">
+        Experience
+      </h2>
 
       <div className="relative max-w-5xl mx-auto">
         {/* Vertical line */}
@@ -67,10 +66,10 @@ const Experience = () => {
         <div className="space-y-32 relative z-10">
           {/* First Experience */}
           <div className="flex md:justify-start justify-center">
-            <div className="bg-white p-6 border-2 border-black rounded-lg shadow-lg w-full md:w-[45%]">
+            <div className="bg-gray-700 text-white p-6 border-2 border-black rounded-lg shadow-lg w-full md:w-[45%]">
               <h3 className="text-xl font-bold">Django Developer</h3>
               <p className="italic">Digital India Corporation</p>
-              <p className="text-sm text-gray-600">Aug 2023 - Oct 2023</p>
+              <p className="text-sm text-gray-400">Aug 2023 - Oct 2023</p>
               <ul className="list-disc ml-5 mt-3 space-y-2">
                 <li>
                   Developed a Django-based replica of the Digilocker Signup
@@ -99,12 +98,12 @@ const Experience = () => {
           {/* Second Experience */}
           <div className="flex md:justify-end justify-center relative">
             {/* Dot for second card */}
-            <div className="absolute left-1/2 top-8 w-5 h-5 bg-white border-4 border-blue-500 rounded-full transform -translate-x-1/2"></div>
+            <div className="absolute left-1/2 -top-20 w-5 h-5 bg-white border-4 border-gray-400 rounded-full transform -translate-x-1/2"></div>
 
-            <div className="bg-white p-6 border-2 border-black rounded-lg shadow-lg w-full md:w-[45%]">
+            <div className="p-6 border-2 border-black bg-gray-700 text-white rounded-lg shadow-lg w-full md:w-[45%]">
               <h3 className="text-xl font-bold">Frontend Developer</h3>
               <p className="italic">Graphix Media</p>
-              <p className="text-sm text-gray-600">June 2022 - July 2022</p>
+              <p className="text-sm text-gray-400">June 2022 - July 2022</p>
               <ul className="list-disc ml-5 mt-3 space-y-2">
                 <li>
                   Developed responsive industrial website UI using HTML, CSS,

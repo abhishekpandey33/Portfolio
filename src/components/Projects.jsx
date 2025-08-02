@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const Projects = () => {
+export default function Projects() {
   const scrollRef = useRef(null);
 
   const projects = [
@@ -10,19 +10,24 @@ const Projects = () => {
         "Developed a system to detect and prevent duplicate data downloads in organizational networks, optimizing storage and bandwidth.",
     },
     {
-      title: "Career Guidance Chatbot",
+      title: "ResumeAt - Resume Builder",
       description:
         "An AI-powered chatbot providing personalized career guidance, degree recommendations, and interview preparation assistance.",
     },
     {
-      title: "E-Learning Platform",
+      title: "Academix - AI Powered Academic System",
       description:
         "Built a responsive e-learning website with video lectures, quizzes, and student performance tracking features.",
     },
     {
-      title: "IoT Home Automation System",
+      title: "Anti-Theft IoT System",
       description:
         "Implemented a smart home automation system using IoT devices, allowing remote control of appliances via a mobile app.",
+    },
+    {
+      title: "Cloud Centralized Development System",
+      description:
+        "Centralized Development Environment using Client-Server Architecture(Cloud Computing)",
     },
     {
       title: "Portfolio Website",
@@ -36,139 +41,54 @@ const Projects = () => {
     },
   ];
 
+  // Duplicate array for seamless looping
+  const repeatedProjects = [...projects, ...projects];
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
-    let scrollAmount = 0;
-    const cardWidth = 320; // ~min-w-[300px] + gap
+    let scrollSpeed = 3; // pixels per frame
+    let animationFrameId;
 
-    const autoScroll = setInterval(() => {
-      if (
-        container.scrollLeft >=
-        container.scrollWidth - container.clientWidth
-      ) {
+    const smoothScroll = () => {
+      container.scrollLeft += scrollSpeed;
+
+      // Reset position when half scrolled
+      if (container.scrollLeft >= container.scrollWidth / 2) {
         container.scrollLeft = 0;
-        scrollAmount = 0; // reset to start
-      } else {
-        scrollAmount += cardWidth;
-        container.scrollTo({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
       }
-    }, 3000); // every 3 sec
 
-    return () => clearInterval(autoScroll);
+      animationFrameId = requestAnimationFrame(smoothScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(smoothScroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
-    // <section
-    //   id="projects"
-    //   className="min-h-screen flex flex-col items-center py-20 bg-yellow-100"
-    // >
-    //   <h2 className=" text-5xl font-bold">Projects</h2>
-    //   <div id="cards" className=" py-40 flex items-center ">
-    //     <div className="w-100 h-100 border-2 p-20">
-
-    //     </div>
-    //     <div className="w-100 h-100 border-2">Card 2</div>
-    //     <div className="w-100 h-100 border-2">Card 3</div>
-    //     <div className="w-100 h-100 border-2">Card 4</div>
-    //     <div className="w-100 h-100 border-2">Card 5</div>
-    //     <div className="w-100 h-100 border-2">Card 6</div>
-    //   </div>
-    // </section>
-    // <section
-    //   id="projects"
-    //   className="min-h-screen flex flex-col items-center py-20 bg-yellow-100"
-    // >
-    //   <h2 className="text-5xl font-bold">Projects</h2>
-
-    //   {/* Scrollable container */}
-    //   <div
-    //     id="cards"
-    //     className="mt-16 flex overflow-x-auto space-x-6 px-6 snap-x snap-mandatory scrollbar-hide"
-    //   >
-    //     {/* Project Card 1 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 1</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-
-    //     {/* Project Card 2 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 2</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-
-    //     {/* Project Card 3 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 3</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-
-    //     {/* Project Card 4 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 4</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-
-    //     {/* Project Card 5 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 5</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-
-    //     {/* Project Card 6 */}
-    //     <div className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300">
-    //       <h3 className="text-2xl font-semibold mb-3">Project 6</h3>
-    //       <p className="text-gray-600">
-    //         A short 3-4 line description about your amazing project. Explain
-    //         what it does, how it works, and the tech used.
-    //       </p>
-    //     </div>
-    //   </div>
-    // </section>
-
     <section
       id="projects"
-      className="min-h-screen flex flex-col items-center py-20 bg-yellow-100"
+      className="flex flex-col items-center py-20 bg-gray-700"
     >
-      <h2 className="text-5xl font-bold">Projects</h2>
+      <h2 className="text-5xl text-white font-bold">Projects</h2>
 
-      {/* Scrollable container */}
       <div
         ref={scrollRef}
-        className="mt-16 flex overflow-x-auto space-x-6 px-6 snap-x snap-mandatory scrollbar-hide scroll-smooth"
+        className="mt-16 flex flex-nowrap overflow-x-hidden space-x-6 px-4 w-[87%] py-10"
+        style={{ scrollBehavior: "auto" }} // disable smooth snap fighting
       >
-        {projects.map((project, index) => (
+        {repeatedProjects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[300px] bg-white rounded-xl shadow-lg border-2 border-gray-300 p-6 snap-center hover:scale-105 transform transition duration-300"
+            className="min-w-[420px] max-w-[420px] bg-gray-800 text-white rounded-lg shadow-lg px-6 py-20 hover:scale-105 transform transition duration-300"
           >
-            <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-            <p className="text-gray-600">{project.description}</p>
+            <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+            <p className="text-gray-400">{project.description}</p>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default Projects;
+}

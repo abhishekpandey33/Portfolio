@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white overflow-x-hidden "
+      className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-gray-500 to-gray-700 text-white overflow-x-hidden "
     >
       <h1 className="text-5xl md:text-7xl lg:8xl font-bold max-w-full">
         FullStack Developer
