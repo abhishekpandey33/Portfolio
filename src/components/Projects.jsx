@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
   const scrollRef = useRef(null);
+  const [paused, setPaused] = useState(false);
 
   const projects = [
     {
@@ -52,20 +53,21 @@ export default function Projects() {
     let animationFrameId;
 
     const smoothScroll = () => {
-      container.scrollLeft += scrollSpeed;
+      if (!paused) {
+        container.scrollLeft += scrollSpeed;
 
-      // Reset position when half scrolled
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-        container.scrollLeft = 0;
+        // Reset position when half scrolled
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
       }
-
       animationFrameId = requestAnimationFrame(smoothScroll);
     };
 
     animationFrameId = requestAnimationFrame(smoothScroll);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+  }, [paused]);
 
   return (
     <section
@@ -75,9 +77,11 @@ export default function Projects() {
       <h2 className="text-5xl text-white font-bold">Projects</h2>
 
       <div
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
         ref={scrollRef}
         className="mt-16 flex flex-nowrap overflow-x-hidden space-x-6 px-4 w-[87%] py-10"
-        style={{ scrollBehavior: "auto" }} // disable smooth snap fighting
+        style={{ scrollBehavior: "auto" }}
       >
         {repeatedProjects.map((project, index) => (
           <div

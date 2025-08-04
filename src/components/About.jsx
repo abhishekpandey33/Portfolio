@@ -54,8 +54,8 @@ const About = () => {
           <p className="text-gray-400 mb-6">
             I was a Finalist at Smart India Hackathon 2024, where we developed
             the
-            <strong>Duplicate Detection and Avoidance System (DDAS)</strong> — a
-            cross-platform utility that detects duplicate downloads at the
+            <strong> Duplicate Detection and Avoidance System (DDAS)</strong> —
+            a cross-platform utility that detects duplicate downloads at the
             system level using metadata analysis. This project involved system
             programming, file monitoring, and multi-OS compatibility.
           </p>

@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="mt-10 ">
         <a
           href="#contact"
-          className="mx-4 px-6 py-3 bg-black text-white rounded-full shadow hover:bg-blue-700 transition"
+          className="mx-4 px-6 py-3 bg-gray-900 text-white rounded-full shadow hover:bg-gray-800 transition"
         >
           <buttton>Get in Touch</buttton>
         </a>
@@ -37,7 +37,7 @@ const Hero = () => {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mx-4 px-8 py-3 bg-black text-white rounded-full shadow hover:bg-blue-700 transition"
+          className="mx-4 px-8 py-3 bg-gray-900 text-white rounded-full shadow hover:bg-gray-800 transition"
         >
           <buttton>Resume</buttton>
         </a>
