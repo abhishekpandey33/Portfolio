@@ -39,14 +39,13 @@ export default function Projects() {
     },
   ];
 
-  // Duplicate array for seamless looping
   const repeatedProjects = [...projects, ...projects];
 
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
-    let scrollSpeed = 3; // pixels per frame
+    let scrollSpeed = 2;
     let animationFrameId;
 
     const smoothScroll = () => {
@@ -66,6 +65,17 @@ export default function Projects() {
     return () => cancelAnimationFrame(animationFrameId);
   }, [paused]);
 
+  const scrollByCard = (direction) => {
+    if (scrollRef.current) {
+      setPaused(true);
+      scrollRef.current.scrollBy({
+        left: direction * 420, // Card width
+        behavior: "smooth",
+      });
+      setTimeout(() => setPaused(false), 500);
+    }
+  };
+
   return (
     <section
       id="projects"
@@ -73,25 +83,43 @@ export default function Projects() {
     >
       <h2 className="text-5xl text-white font-bold">Projects</h2>
 
-      <div
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-        ref={scrollRef}
-        className="mt-16 flex flex-nowrap overflow-x-hidden space-x-6 px-4 w-[87%] py-10"
-        style={{ scrollBehavior: "auto" }}
-      >
-        {repeatedProjects.map((project, index) => (
-          <div
-            key={index}
-            className="min-w-[420px] max-w-[420px] bg-gray-800 text-white rounded-lg shadow-lg px-6 pt-20 pb-10 hover:scale-105 transform transition duration-300"
-          >
-            <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-            <p className="text-gray-400">{project.description}</p>
-            <div>
-              <Technology technologies={project.technologies}></Technology>
+      <div className="relative w-[87%] ">
+        {/* Left Arrow */}
+        <button
+          className="absolute left-[-33px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
+          onClick={() => scrollByCard(-1)}
+        >
+          &larr;
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          className="absolute right-[-33px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
+          onClick={() => scrollByCard(1)}
+        >
+          &rarr;
+        </button>
+
+        <div
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          ref={scrollRef}
+          className="mt-16 flex flex-nowrap overflow-x-hidden space-x-6 px-4 py-10"
+          style={{ scrollBehavior: "auto" }}
+        >
+          {repeatedProjects.map((project, index) => (
+            <div
+              key={index}
+              className="min-w-[420px] max-w-[420px] bg-gray-800 text-white rounded-lg shadow-lg px-6 pt-20 pb-10 hover:scale-105 transform transition duration-300"
+            >
+              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+              <p className="text-gray-400">{project.description}</p>
+              <div>
+                <Technology technologies={project.technologies}></Technology>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
