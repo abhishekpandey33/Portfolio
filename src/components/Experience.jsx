@@ -15,7 +15,7 @@ const Experience = () => {
           {/* First Experience */}
           <div className="flex md:justify-start justify-center">
             <div className="bg-gray-700 text-white p-6 border-2 border-black rounded-lg shadow-lg w-full md:w-[45%]">
-              <h3 className="text-xl font-bold">Django Developer</h3>
+              <h3 className="text-xl font-bold">Backend Developer</h3>
               <p className="italic">Digital India Corporation</p>
               <p className="text-sm text-gray-400">Aug 2023 - Oct 2023</p>
               <ul className="list-disc ml-5 mt-3 space-y-2">
