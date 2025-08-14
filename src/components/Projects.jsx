@@ -30,16 +30,6 @@ export default function Projects() {
       description:
         "Designed a client-server setup using SSH to centralize development and deployment and enabled team members to contribute without local installations, saving RAM/CPU, improving collaboration, version control, and resource efficiency across the team",
     },
-    {
-      title: "Portfolio Website",
-      description:
-        "Designed and developed a personal portfolio website using React and Tailwind CSS to showcase projects and skills.",
-    },
-    {
-      title: "Industrial Website UI",
-      description:
-        "Developed a responsive UI for an industrial website using HTML, CSS, and JavaScript, ensuring cross-device compatibility.",
-    },
   ];
 
   // Duplicate array for seamless looping
