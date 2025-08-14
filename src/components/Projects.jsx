@@ -86,7 +86,7 @@ export default function Projects() {
       <div className="relative w-[87%] ">
         {/* Left Arrow */}
         <button
-          className="absolute left-[-33px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
+          className="absolute left-[-40px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
           onClick={() => scrollByCard(-1)}
         >
           &larr;
@@ -94,7 +94,7 @@ export default function Projects() {
 
         {/* Right Arrow */}
         <button
-          className="absolute right-[-33px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
+          className="absolute right-[-40px] top-1/2 -translate-y-1/2 text-white px-2 py-1 bg-gray-600 rounded-full z-10 hover:bg-gray-500"
           onClick={() => scrollByCard(1)}
         >
           &rarr;
