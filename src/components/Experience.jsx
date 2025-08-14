@@ -1,59 +1,7 @@
+import Technology from "./Technology";
+
 const Experience = () => {
   return (
-    // <section
-    //   id="experience"
-    //   className="bg-blue-400 text-black py-20 px-4 md:px-20"
-    // >
-    //   <h2 className="text-5xl text-center font-bold mb-8">Experience</h2>
-    //   <div className="relative max-w-3xl mx-auto">
-    //     <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-400 transform-translate-x-1/2 "></div>
-    //     <div className="space-y-20 relative z-10">
-    //       <div className="py-20 px-5 flex border-2 border-black">
-    //         <h3>Django Developer</h3>
-    //         <p>Digital India Corporation</p>
-    //         <p>Aug 2023- Oct 2023</p>
-    //         <ul>
-    //           <li>
-    //             * Developed a Django-based replica of the Digilocker Signup
-    //             Page.
-    //           </li>
-    //           <li>
-    //             * Containerized the application using Docker and pushed it to
-    //             OpenForge.
-    //           </li>
-    //           <li>
-    //             * Fixed validation bugs, contributed to folder creation features
-    //             in Drive API
-    //           </li>
-    //           <li>
-    //             * Did API documentation using Swagger and tested endpoints using
-    //             Postman.
-    //           </li>
-    //           <li>
-    //             * Worked remotely with a distributed team under Agile-based task
-    //             management.
-    //           </li>
-    //         </ul>
-    //       </div>
-
-    //       <div className="py-20 px-5 flex flex-col border-2 border-black">
-    //         <h3>Frontend Developer</h3>
-    //         <p>Graphix Media</p>
-    //         <p>June 2022- July 2022</p>
-    //         <ul>
-    //           <li>
-    //             * Developed responsive industrial website UI using HTML, CSS,
-    //             JavaScript.
-    //           </li>
-    //           <li>
-    //             * Adhered to design specifications, ensuring consistent styling
-    //             and layout.
-    //           </li>
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
     <section id="experience" className="bg-gray-900 py-20 px-4 md:px-20">
       <h2 className="text-5xl text-center text-white font-bold mb-8">
         Experience
@@ -72,8 +20,8 @@ const Experience = () => {
               <p className="text-sm text-gray-400">Aug 2023 - Oct 2023</p>
               <ul className="list-disc ml-5 mt-3 space-y-2">
                 <li>
-                  Developed a Django-based replica of the Digilocker Signup
-                  Page.
+                  Developed a Django-based replica of the Digilocker
+                  Signup-OTP-Aadhaar Verification flow Pages.
                 </li>
                 <li>
                   Containerized the application using Docker and pushed it to
@@ -92,6 +40,9 @@ const Experience = () => {
                   management.
                 </li>
               </ul>
+              <div>
+                <Technology technologies="HTML, CSS, JavaScript, Python, Django, Git, Docker"></Technology>
+              </div>
             </div>
           </div>
 
@@ -114,6 +65,9 @@ const Experience = () => {
                   and layout.
                 </li>
               </ul>
+              <div>
+                <Technology technologies="HTML, CSS, JavaScript"></Technology>
+              </div>
             </div>
           </div>
         </div>

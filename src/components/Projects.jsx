@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Technology from "./Technology";
 
 export default function Projects() {
   const scrollRef = useRef(null);
@@ -9,26 +10,32 @@ export default function Projects() {
       title: "DDAS - Duplicate Detection & Avoidance System",
       description:
         "Developed a system-level utility software to detect and prevent duplicate data downloads in organizational networks, optimizing storage and bandwidth.",
+      technologies:
+        "Python, System-Programming, Command-Line Utility Development",
     },
     {
       title: "ResumeAt - Resume Builder",
       description:
         "A clean, interactive Resume builder , which allows users to create, edit and preview resumes in real-time, providing resume templates and pdf download.",
+      technologies: "React js, Tailwind CSS, Express js, MongoDB",
     },
     {
       title: "Academix - AI Powered Academic System",
       description:
         "An AI-powered app that break the courses into structures modules and helps learners complete course in a proficient and sequential way.",
+      technologies: "React js, Tailwind CSS, Django, DRF, SQLite",
     },
     {
       title: "Anti-Theft IoT System",
       description:
         "Built a motion-based security system using ESP32 and PIR sensor and integrated Pusbullet API for instant smartphone alerts improving Home Security through real-time intrusion detection and efficient IoT automation",
+      technologies: "ESP32, PIR Sensor, Internet of Things",
     },
     {
       title: "Cloud Centralized Development System",
       description:
         "Designed a client-server setup using SSH to centralize development and deployment and enabled team members to contribute without local installations, saving RAM/CPU, improving collaboration, version control, and resource efficiency across the team",
+      technologies: "Cloud Computing, SSH Communication",
     },
   ];
 
@@ -76,10 +83,13 @@ export default function Projects() {
         {repeatedProjects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[420px] max-w-[420px] bg-gray-800 text-white rounded-lg shadow-lg px-6 py-20 hover:scale-105 transform transition duration-300"
+            className="min-w-[420px] max-w-[420px] bg-gray-800 text-white rounded-lg shadow-lg px-6 pt-20 pb-10 hover:scale-105 transform transition duration-300"
           >
             <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
             <p className="text-gray-400">{project.description}</p>
+            <div>
+              <Technology technologies={project.technologies}></Technology>
+            </div>
           </div>
         ))}
       </div>
